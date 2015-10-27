@@ -1,0 +1,126 @@
+﻿body { padding-top: 50px; padding-bottom: 20px; }
+
+/* Set padding to keep content from hitting the edges */
+.body-content { padding-left: 15px; padding-right: 15px; position: relative; }
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea { max-width: 280px; }
+
+.home-banner {
+    margin-top: 30px;
+}
+
+.footer {
+    margin-top: 100px;
+    font-size: 1em;
+    color: red;
+}
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak { display: none !important; }
+
+/*.ng-enter, .ng-leave {
+    -webkit-transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) .5s;
+    transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) .5s;
+    display: block;
+    width: 1170px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+.ng-enter {
+    left: 100%;
+}
+.ng-enter.ng-enter-active {
+    left: 0;
+}
+.ng-leave.ng-leave-active {
+    left: -200%;
+}*/
+
+.ng-enter {
+    /*-webkit-transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) .5s;
+    transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) .5s;*/
+    transition: all .25s linear;
+    opacity: 0;
+    display: inline;
+    /*width: 1170px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: absolute;
+    left: 0;
+    right: 0;*/
+}
+.ng-leave {
+    /*-webkit-transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) .5s;
+    transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) .5s;*/
+    /*animation: rotateFall 0.5s both ease-in; z-index: 9999;*/
+    /*transition: all 2.5s linear;
+    opacity: 1;
+    display: inline;
+    width: 1170px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: absolute;
+    left: 0;
+    right: 0;*/
+}
+/*.ng-enter {
+    left: 100%;
+}*/
+.ng-enter.ng-enter-active {
+    /*left: 0;*/
+    opacity: 1;
+}
+.ng-leave.ng-leave-active {
+    /*top: -200%;*/
+    opacity: 0;
+}
+
+
+/* ANIMATIONS
+============================================================================= */
+
+/* leaving animations ----------------------------------------- */
+
+/* rotate and fall */
+@keyframes rotateFall {
+    0%      { transform: rotateZ(0deg); }
+    20%     { transform: rotateZ(10deg); animation-timing-function: ease-out; }
+    40%     { transform: rotateZ(17deg); }
+    60%     { transform: rotateZ(16deg); }
+    100%    { transform: translateY(100%) rotateZ(17deg); }
+}
+
+/* slide in from the bottom */
+@keyframes slideOutLeft {
+    to      { transform: translateX(-100%); }
+}
+
+/* rotate out newspaper */
+@keyframes rotateOutNewspaper {
+    to      { transform: translateZ(-3000px) rotateZ(360deg); opacity: 0; }
+}
+
+
+/* entering animations --------------------------------------- */
+
+/* scale up */
+@keyframes scaleUp {
+    from    { opacity: 0.3; -webkit-transform: scale(0.8); }
+}
+
+/* slide in from the right */
+@keyframes slideInRight {
+    from    { transform:translateX(100%); }
+    to      { transform: translateX(0); }
+}
+
+/* slide in from the bottom */
+@keyframes slideInUp {
+    from    { transform:translateY(100%); }
+    to      { transform: translateY(0); }
+}

@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html lang="en" ng-app="northwindApp">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="description" content="SPA Application" />
+        <link rel="shortcut icon" type="image/x-icon" href="/images/Hopstarter-Purple-Monsters-Alien-satisfied.ico" />
+
+        <title>@ViewBag.Title</title>
+
+        @Styles.Render("~/Content/css")
+        @Styles.Render("~/Content/kendo")
+        @RenderSection("Styles", required: false)
+
+        @Scripts.Render("~/bundles/modernizr")
+    </head>
+    <body>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    @*<a href="#/home" class="navbar-brand">
+                        @ViewBag.Title
+                    </a>*@
+                    <a class="navbar-brand" href="/">
+                        <img src="/images/Hopstarter-Purple-Monsters-Alien-satisfied.ico" width="48">
+                        <span class="title">@ViewBag.Title</span>
+                    </a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#/home">Home</a></li>
+                        <li><a href="#/customer">Contacts</a></li>
+                        <li><a href="#/schedule">Schedule</a></li>
+                        <li><a href="#/help">Help</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/">Register | Sign-in</a></li>
+                    </ul>
+               </div>
+            </div>
+        </div>
+        <div class="container body-content">
+            @RenderBody()
+            <footer class="footer">
+                <div align="center">
+                    <p>Copyright &copy; @DateTime.Now.Year - Vorba Corporation</p>                  
+                </div>
+            </footer>
+        </div>
+
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/angular")
+        @Scripts.Render("~/bundles/app")
+        @Scripts.Render("~/bundles/kendo")
+        @Scripts.Render("~/bundles/bootstrap")
+
+        @RenderSection("Scripts", required: false)
+    </body>
+</html>
