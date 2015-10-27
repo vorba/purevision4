@@ -15,7 +15,7 @@ textarea { max-width: 280px; }
 .footer {
     margin-top: 100px;
     font-size: 1em;
-    color: red;
+    color: gray;
 }
 
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak { display: none !important; }
